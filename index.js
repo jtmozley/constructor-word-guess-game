@@ -11,7 +11,6 @@ var Word = require("./Word"); // require word output
 var inquirer = require("inquirer"); // require inquirer
 
 var guessesLeft = 10; //guesses left at the beginning of the game
-<<<<<<< HEAD
 var guessedLetters = []; // array of guessed letters
 
 var characters = [
@@ -31,28 +30,14 @@ var characters = [
 var selectedWord = characters[
   Math.floor(Math.random() * characters.length)
 ].split(""); //randomly selected word from characters list split up accordingly
-=======
-var characters = ["mountains","rocky","zion","glacier","wind cave","denali","biscayne","kenai fjords","basin","isle","lake"]; // array of words to use
-var guessedLetters = []; // array of guessed letters
-var selectedWord = characters[Math.floor(Math.random() * characters.length)].split(""); //randomly selected word from characters list split up accordingly
->>>>>>> 36a323fe46fe2e5b0bf99b7363868635e26e102a
 
 Word.makeWord(selectedWord);
 
 var output = []; // output post testing
 
-<<<<<<< HEAD
 //[x]selected word needs to be sent through word.makeword() and turned into an array of objects
 //[]THEN the objects need to be sifted through and if no guess has been made, return back "_"
 //[]somehow store this string of underscores in var output in index.js
-=======
-///////////////// used for testing. should be in the word.js constructor
-// for (var i = 0; i < selectedWord.length; i++) {
-//   output.push(new Letter(selectedWord[i], guessedLetters).reveal());
-// }
-// console.log(new Word(selectedWord, guessedLetters,output));
-/////////////////
->>>>>>> 36a323fe46fe2e5b0bf99b7363868635e26e102a
 
 // // // // // hangman game in recursive function
 var hangman = function() {
@@ -106,7 +91,6 @@ var hangman = function() {
 };
 hangman();
 
-<<<<<<< HEAD
 // function win() {
 //   if (output.indexOf("_") >= 0) {
 //     hangman();
@@ -142,28 +126,3 @@ hangman();
 // console.log(new Word(selectedWord, guessedLetters,output));
 /////////////////
 //----------------------------------------------
-=======
-function win() {
-  if (output.indexOf("_") >= 0) {
-    hangman();
-  } else {
-    console.log("You Win!");
-    inquirer
-      .prompt([
-        {
-          type: "list",
-          message: "Play Again?",
-          choices: ["Yes", "No"],
-          name: "playAgain"
-        }
-      ])
-      .then(function(inquirerResponse) {
-        if (inquirerResponse.playAgain === "Yes") {
-          hangman();
-        } else {
-          console.log("Come play again soon!");
-        }
-      });
-  }
-}
->>>>>>> 36a323fe46fe2e5b0bf99b7363868635e26e102a
