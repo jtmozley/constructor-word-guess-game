@@ -28,7 +28,7 @@ var guessesLeft = 10;
 
 function hangman() {
   if (requireNewWord) {
-    var randomWord = characters[Math.floor(Math.random() * characters.length)];
+    randomWord = characters[Math.floor(Math.random() * characters.length)];
     computerWord = new Word(randomWord);
     requireNewWord = false;
   }
