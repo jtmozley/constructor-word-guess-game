@@ -1,3 +1,3 @@
 # WordGuess-CLI
 
-A Word Guess command-line game using constructor functions.
+A command-line word guessing game using constructor functions.
