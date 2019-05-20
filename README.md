@@ -6,5 +6,5 @@ A command-line word guessing game using constructor functions.
 ## Technologies Used
 - Node.js
 - NPM Packages
-- * Inquirer
-- * Chalk
+  * Inquirer
+  * Chalk
